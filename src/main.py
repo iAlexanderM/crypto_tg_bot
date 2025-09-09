@@ -139,7 +139,7 @@ async def run_bot() -> None:
             elif text == "/mypairs":
                 await cmd_my_pairs(update, context)
             elif text == "/price":
-                await cmd_price(update, context)
+                await cmd_cached_price(update, context)
             elif text in ["📊 Добавить пару", "📊 Установить пару криптовалют", "📈 Текущий курс", "👁️ Мои пары", "❓ Помощь"]:
                 await handle_price_check(update, context)
             elif text.replace(".", "").replace("-", "").isdigit() or text == "-" or text == "Отмена":
